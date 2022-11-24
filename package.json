@@ -1,5 +1,5 @@
 {
-  "name": "@mcache",
+  "name": "mtagcache",
   "version": "0.70.0",
   "description": "NodeJS file tag caching",
   "main": "index.js",
