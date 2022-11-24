@@ -1,0 +1,20 @@
+{
+  "name": "@msolutionslk/mcache",
+  "version": "0.70.0",
+  "description": "NodeJS file tag caching",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mufaad Munawwar (MM)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mufaadsoft/nodejs-mcache.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mufaadsoft/nodejs-mcache/issues"
+  },
+  "homepage": "https://github.com/mufaadsoft/nodejs-mcache#readme"
+}
