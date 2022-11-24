@@ -1,6 +1,6 @@
 {
   "name": "mtagcache",
-  "version": "0.71.0",
+  "version": "0.7.5",
   "description": "NodeJS file tag caching",
   "main": "index.js",
   "scripts": {
