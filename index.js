@@ -4,10 +4,26 @@ exports.createCache = (key_id, ttl = 0, data = () => {}, tags = ["data"]) => {
     key_id,
     tags
   );
+  // console.log(data());
   if (cacheDirectoryWithFileName) {
-    return mFH.readCache(cacheDirectoryWithFileName, data, ttl);
+    // if(typeof data().then == "function")
+    // {
+    //   data().then(async (r) => {
+    //     console.log(r);
+    //     return mFH.readCache(cacheDirectoryWithFileName, r, ttl);
+    //   })    
+    // }else{
+      return mFH.readCache(cacheDirectoryWithFileName, data, ttl);
+    // }
   }
-  return data();
+  // if(typeof data().then == "function")
+  //   {
+  //     data().then(async (r) => {
+  //       return r;
+  //     });
+  // }else{
+    return data();
+  // }
 };
 
 exports.remove = (key_id = null, tags = []) => {

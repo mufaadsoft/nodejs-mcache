@@ -58,9 +58,20 @@ exports.readCache = (path, data, ttl) => {
 };
 
 exports.writeContent = (data, path, ttl) => {
-  var encodedContent = this.addSpecialTimer(ttl) + "" + JSON.stringify(data());
-  fs.writeFileSync(path, encodedContent);
+  if(typeof data().then === 'function') {
+    data().then(async (r) => {
+      var encodedContent = this.addSpecialTimer(ttl) + "" + JSON.stringify(r);
+      fs.writeFileSync(path, encodedContent);
+      // return data();
+    });
+  }else{
+    var encodedContent = this.addSpecialTimer(ttl) + "" + JSON.stringify(data());
+    fs.writeFileSync(path, encodedContent);
+    // return data();
+
+  }
   return data();
+
 };
 exports.currentTimeSC = () => {
   var date = new Date();
